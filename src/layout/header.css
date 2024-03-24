@@ -1,0 +1,25 @@
+.menu1 {
+    position: fixed;
+    /* padding-top: 80px; */ 
+    top: 0; 
+    left: 0;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(194, 184, 184);
+  }
+.menu1 img{
+    width: 100px;
+    height: 60px;
+}
+.menu1 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 1%;
+}
+  
