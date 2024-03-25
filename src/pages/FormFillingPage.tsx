@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./FormFillingPage.css";
 
 function FormFillingPage() {
-  // Инициализация состояния для данных формы
+ 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,7 +11,7 @@ function FormFillingPage() {
     term: '',
   });
 
-  // Функция для обработки изменений в полях формы
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,9 +20,9 @@ function FormFillingPage() {
     });
   };
 
-  // Функция для обработки отправки формы
+  
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Предотвратить стандартное поведение отправки формы
+    e.preventDefault(); 
     const { name, email, amount, currency, term } = formData;
 
     try {
