@@ -18,21 +18,24 @@ body {
     padding-top: 1%;
   }
   
-  .container2 h1 {
-    /* font-size: 30px; */
+  .container2 p {
     color: #000;
     margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 46px;
   }
   
-  .container2 p {
-    /* font-size: 25px; */
-    color: #000000;
+  .container2 span {
+    font-family: "Inter";
+    line-height: 0.5;
+    font-size: 20px;
+    font-weight: medium;
+    color: #0A0A0A;
     text-align: left;
-    font-weight: 600;
   }
   
   .container2 button {
-    background-color: #007bff;
+    background-color: #5E8AE0;
     color: white;
     border: none;
     border-radius: 10px;
@@ -46,4 +49,7 @@ body {
   .container img {
     max-width: auto;
     height: 690px;
+  }
+  .container2 button {
+    font-weight: bold;
   }

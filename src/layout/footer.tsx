@@ -2,7 +2,7 @@ import "./footer.css"
 function Footer() {
   return (
     <footer className="container_footer">
-      <p>Все права защищены 2024г. "ООО Турбо займ"</p>
+      <strong>Все права защищены © 2024 г. “OOO Турбо Заем”</strong>
     </footer>
   );
 }
