@@ -12,7 +12,7 @@ function FormFillingPage() {
   });
 
  
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -21,7 +21,7 @@ function FormFillingPage() {
   };
 
   
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault(); 
     const { name, email, amount, currency, term } = formData;
 

@@ -5,19 +5,16 @@ function Menu() {
 
   return (
     <div>
-      <ul
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "10px",
-          marginTop: "20px",
-          listStyle: "none",
-        }}
-      >
+      <ul>
         <li>
           {location.pathname === "/form-filling-page" && (
             <button className="menu">
-              <Link style={{color:"#ffffff"}}to="/login-page">войти</Link>
+              <Link
+                to="/login-page"
+                style={{ color: "#ffffff", textDecoration: "none" }}
+              >
+                войти
+              </Link>
             </button>
           )}
         </li>
@@ -26,4 +23,4 @@ function Menu() {
   );
 }
 
-export {Menu};
+export { Menu };

@@ -1,5 +1,8 @@
+html,body{
+    overflow: auto;
+}
 .menu1 {
-    position: fixed;
+    position: absolute;
     /* padding-top: 80px; */ 
     top: 0; 
     left: 0;
@@ -18,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width:100%;
     margin-left: 1%;
 }
   

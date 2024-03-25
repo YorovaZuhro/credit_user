@@ -1,14 +1,12 @@
  html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;}
+body { 
+  overflow: hidden;
+}
 .container {
     display: flex;
     align-items:start;
     justify-content: space-around;
-    padding: 100px;
+    padding: 96px;
   }
   
   .container2 {
@@ -26,7 +24,6 @@ body {
   }
   
   .container2 span {
-    font-family: "Inter";
     line-height: 0.5;
     font-size: 20px;
     font-weight: medium;
@@ -48,7 +45,7 @@ body {
   
   .container img {
     max-width: auto;
-    height: 690px;
+    height: 680px;
   }
   .container2 button {
     font-weight: bold;

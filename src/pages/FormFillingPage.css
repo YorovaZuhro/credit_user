@@ -15,7 +15,6 @@
 }
 .main_container span {
   display: block;
-  font-family: "Inter";
   font-size: 20px;
   font-weight: medium;
   color: #0a0a0a;
@@ -35,7 +34,6 @@
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
   max-width: 900px;
-  margin: 0 auto;
 }
 
 .form-field {
@@ -74,18 +72,11 @@
   padding-left: 5px;
 }
 
-.unit-input-container {
-  display: flex;
-}
-
-.unit-input {
-  flex-grow: 1;
-}
 .form-field1{
   border: 1px solid #c0b0b0;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 280px;
