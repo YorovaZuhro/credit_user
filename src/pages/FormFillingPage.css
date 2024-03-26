@@ -40,11 +40,11 @@
   border: 1px solid #c0b0b0;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 460px;
-  height: 50px;
+  height: 40px;
   color: #000;
 }
 
@@ -79,34 +79,34 @@
   border: 1px solid #c0b0b0;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 290px;
-  height: 50px;
+  height: 40px;
   color: #000;
 }
 .form-field3{
   border: 1px solid #c0b0b0;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 290px;
-  height: 50px;
+  height: 40px;
   color: #000;
-  margin-right: 150px;
+  margin-right: 169px;
 }
 .form-field2{
   border: 1px solid #c0b0b0;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 140px;
-  height: 50px;
+  height: 40px;
   color: #000;
   flex: 1; 
 }
