@@ -9,4 +9,6 @@
   /* outline: none; */
   border: none;
 }
-
+.indent{
+    margin-right: 10px;
+}

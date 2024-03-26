@@ -6,7 +6,7 @@ function Menu() {
   return (
     <div>
       <ul>
-        <li>
+        <li className="indent">
           {location.pathname === "/form-filling-page" && (
             <button className="menu">
               <Link
