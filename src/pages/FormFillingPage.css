@@ -37,15 +37,16 @@
 }
 
 .form-field {
-  border: 1px solid #c0b0b0;
+  border: 2px solid #E6E6E6;
   border-radius: 20px;
-  padding: 10px;
+  padding: 21px;
   margin-bottom: 5px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 460px;
-  height: 40px;
   color: #000;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .label {
@@ -54,6 +55,7 @@
   color: #000000;
   background-color: #ffffff;
   text-align: left;
+  font-weight: bold;
 }
 .submit-button {
   background-color: #5E8AE0;
@@ -62,7 +64,7 @@
   font-weight: bold;
   font-size: 18px;
   display: block;
-  width: 460px;
+  width: 500px;
   height: 60px;
   border-radius: 20px;
   box-shadow: none;
@@ -76,39 +78,41 @@
 }
 
 .form-field1{
-  border: 1px solid #c0b0b0;
+  border: 2px solid #E6E6E6;
   border-radius: 20px;
-  padding: 10px;
+  padding: 21px;
   margin-bottom: 5px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 290px;
-  height: 40px;
   color: #000;
+  font-size: 18px;
+  font-weight: bold;
 }
 .form-field3{
-  border: 1px solid #c0b0b0;
+  border: 2px solid #E6E6E6;
   border-radius: 20px;
-  padding: 10px;
+  padding: 21px;
   margin-bottom: 25px;
   width: calc(100% - 22px);
   background-color: #ffffff;
   width: 290px;
-  height: 40px;
   color: #000;
   margin-right: 169px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .form-field2{
-  border: 1px solid #c0b0b0;
+  border: 2px solid #E6E6E6;
   border-radius: 20px;
-  padding: 10px;
+  padding: 21px;
   margin-bottom: 5px;
   width: calc(100% - 22px);
   background-color: #ffffff;
-  width: 140px;
-  height: 40px;
+  width: 120px;
   color: #000;
-  flex: 1; 
+  font-size: 18px;
+  font-weight: bold;
 }
 .fields-container {
   display: flex;

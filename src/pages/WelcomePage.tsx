@@ -10,15 +10,15 @@ function WelcomePage() {
   return (
     <div className="container">
       <div className="container2">
-        <p>
+        <p className="text">
           Добро пожаловать в сервис "Турбо заем"
         </p>
-        <span>
+        <p className="text1">
           Вам нужен небольшой заем для покрытия неожиданных расходов или крупная
           сумма для реализации ваших планов,мы готовы помочь. наш процесс
           одобрения займа моментальный, быстрее оставьте заявку и ждите отклика
           от нас
-        </span>
+        </p>
         <button onClick={handleLoginClick}>Оставить заяку</button>
       </div>
       <img src={bannerurl} alt="картинка " />

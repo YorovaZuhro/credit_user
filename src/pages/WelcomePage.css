@@ -16,19 +16,22 @@ body {
     padding-top: 1%;
   }
   
-  .container2 p {
+  .text {
     color: #000;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 46px;
   }
   
-  .container2 span {
-    line-height: 0.5;
+  .text1 {
+    /* line-height: 0.5; */
     font-size: 20px;
     font-weight: medium;
     color: #0A0A0A;
     text-align: left;
+    width: 510px;
+    height: 120px;
+    margin-bottom: 50px;
   }
   
   .container2 button {
