@@ -55,11 +55,11 @@ function FormFillingPage() {
   return (
     <div className="main_container">
       <div>
-        <p>Заполните форму</p>
-        <span>
+        <p className="text">Заполните форму</p>
+        <p  className="text1">
           Мы готовы помочь вам получить необходимый<br></br> заем быстро и
           легко. Пожалуйста, заполните<br></br> все обязательные поля
-        </span>
+        </p>
       </div>
       <div className="form-container">
         <div className="form-title">Заполните форму</div>
