@@ -7,12 +7,6 @@ function Menu() {
     color: location.pathname === path ? "#FCA713" : "#0A0A0A",
   });
 
-  function linkStyle(path: string) {
-    return {
-      color: location.pathname === path ? "#007bff" : "#ffffff",
-      textDecoration: "none",
-    };
-  }
 
   return (
     <div>

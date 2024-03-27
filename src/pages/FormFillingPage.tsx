@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./FormFillingPage.css";
 
 function FormFillingPage() {
- 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,7 +10,6 @@ function FormFillingPage() {
     term: '',
   });
 
- 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,7 +18,6 @@ function FormFillingPage() {
     });
   };
 
-  
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault(); 
     const { name, email, amount, currency, term } = formData;
@@ -43,7 +40,13 @@ function FormFillingPage() {
       if (response.ok) {
         const result = await response.json();
         console.log('Success:', result);
-        // Здесь можно обработать результат, например, очистить форму или показать сообщение об успехе
+        setFormData({
+          name: '',
+          email: '',
+          amount: '',
+          currency: '',
+          term: '',
+        });
       } else {
         console.error('Server responded with error:', response.status);
       }
@@ -56,7 +59,7 @@ function FormFillingPage() {
     <div className="main_container">
       <div>
         <p className="text">Заполните форму</p>
-        <p  className="text1">
+        <p className="text1">
           Мы готовы помочь вам получить необходимый<br></br> заем быстро и
           легко. Пожалуйста, заполните<br></br> все обязательные поля
         </p>
@@ -97,6 +100,7 @@ function FormFillingPage() {
                 value={formData.amount}
                 onChange={handleChange}
                 required
+                min="0"
               />
             </div>
 
@@ -104,6 +108,7 @@ function FormFillingPage() {
               <label className="label required">Валюта</label>
               <input
                 name="currency"
+                type="text" 
                 className="form-field2"
                 placeholder="TJS"
                 value={formData.currency}
@@ -122,6 +127,7 @@ function FormFillingPage() {
             value={formData.term}
             onChange={handleChange}
             required
+            min="0"
           />
 
           <button type="submit" className="submit-button">
