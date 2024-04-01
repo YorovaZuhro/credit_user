@@ -22,30 +22,11 @@ function Menu() {
         </button>
         )}
       </ul>
-      {location.pathname === "/request-page" && (
-        <ul className="indent1">
-          <li className="indent">
-            <Link to="/request-page" style={linkStyle1("/request-page")}>
-              Мои заявки
-            </Link>
-          </li>
-          <li className="indent">
-            <Link to="/credits-page" style={linkStyle1("/credits-page")}>
-              Мои кредиты
-            </Link>
-          </li>
-        </ul>
-      )}
         {location.pathname === "/credits-page" && (
         <ul className="indent1">
           <li className="indent">
-            <Link to="/request-page" style={linkStyle1("/request-page")}>
-              Мои заявки
-            </Link>
-          </li>
-          <li className="indent">
-            <Link to="/credits-page" style={linkStyle1("/credits-page")}>
-              Мои кредиты
+            <Link to="/" style={linkStyle1("/credits-page")}>
+              На главную
             </Link>
           </li>
         </ul>

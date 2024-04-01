@@ -1,0 +1,197 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow: auto ; */
+}
+.request-header {
+  margin-top: 150px;
+  text-align: left;
+  font-size: 48px;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+.request-span {
+  color: #0a0a0a;
+  font-weight: bold;
+  font-size: 48px;
+  margin-left: 140px;
+}
+.request-table {
+  border-collapse: separate;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  border-spacing: 5px;
+  background-color: transparent;
+  margin-left: 140px;
+  margin-bottom: 200px;
+  margin-right: 135px;
+}
+
+.request-thead {
+  background-color: #fca713;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+th {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border-top: none;
+}
+td {
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #000000;
+  color: #0a0a0a;
+}
+
+.request-table th:first-child {
+  border-top-left-radius: 20px;
+  width: 170px;
+  height: 40px;
+}
+
+.request-table th:last-child {
+  border-top-right-radius: 20px;
+  width: 165px;
+  height: 40px;
+}
+.request-table thead th:nth-child(2) {
+  width: 170px;
+  height: 40px;
+}
+.request-table thead th:nth-child(3) {
+  width: 120px;
+  height: 40px;
+}
+.request-table thead th:nth-child(4) {
+  width: 202px;
+  height: 40px;
+}
+.request-table thead th:nth-child(5) {
+  width: 143px;
+  height: 40px;
+}
+.request-table thead th:nth-child(6) {
+  width: 165px;
+  height: 40px;
+}
+tbody tr:hover {
+  background-color: #fffacd;
+}
+.Button {
+  width: 140px;
+  height: 28px;
+  color: #fefefe;
+  background-color: #5e8ae0;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.request-modal-bg {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .request-modal {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    height: 350px;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 2;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .request-modal-close-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    left: 90%;
+    color: #E6E6E6;
+  }
+  .request-modal-title {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .block{
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  .request-modal-label {
+    display: block;
+    margin-bottom: -12px;
+    color: #0A0A0A;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .request-modal-input {
+    width: 500px;
+    height: 41px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    color: #696868;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .request-modal-button {
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 250px;
+    height : 61px;
+    background-color: #5E8AE0;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .request-modal-cancel-button {
+    border-radius: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #FCA713;
+    width: 250px;
+    height : 61px;
+    border: solid 2px #FCA713 ;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+
+
+
+
+
