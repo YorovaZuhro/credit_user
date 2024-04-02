@@ -9,7 +9,7 @@ body {
     padding-top: 95px;
   }
   
-  .container2 {
+  .container-text{
     margin-top: 60px;
     text-align: left;
     max-width: 38%;
@@ -23,7 +23,7 @@ body {
     font-size: 46px;
   }
   
-  .text1 {
+  .welcome-text{
     /* line-height: 0.5; */
     font-size: 20px;
     font-weight: medium;
@@ -34,7 +34,7 @@ body {
     margin-bottom: 50px;
   }
   
-  .container2 button {
+  .container-text button {
     background-color: #5E8AE0;
     color: white;
     border: none;

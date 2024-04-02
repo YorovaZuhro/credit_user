@@ -1,12 +1,13 @@
 import React, {  useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+import Swal from 'sweetalert2';
 
 function LoginPage() {
   const navigate = useNavigate();
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const [userId, setUserId] = useState("");
+  const [,setUserId] = useState("");
 
 
   const handleClick = async () => {
@@ -21,21 +22,33 @@ function LoginPage() {
           password: password,
         }),
       });
+  
       if (response.ok) {
-        const { data } = await response.json(); 
-        localStorage.setItem("userId", data.id); 
+        const { data } = await response.json();
+        localStorage.setItem("userId", data.id);
         console.log(localStorage.getItem("userId"));
-        
-        setUserId(data.id); 
+  
+        setUserId(data.id);
         navigate('/credits-page');
       } else {
         console.error("Invalid email or password:", response.status);
+        // Отображение модального окна об ошибке
+        Swal.fire({
+          icon: 'error',
+          title: 'Ошибка аутентификации',
+          text: 'Неверный логин или пароль',
+        });
       }
     } catch (error) {
       console.error("Failed to sign-in:", error);
+      // Отображение модального окна при возникновении исключения во время запроса
+      Swal.fire({
+        icon: 'error',
+        title: 'Ошибка',
+        text: 'Произошла ошибка при попытке входа',
+      });
     }
   };
-  
 
   const handleLoginChange = (event: {
     target: { value: React.SetStateAction<string> };
@@ -64,7 +77,7 @@ function LoginPage() {
           <input
             name="name"
             type="text"
-            className="input1"
+            className="input-login"
             placeholder="ivanovivan@mail.com"
             required
             value={login}
@@ -75,13 +88,13 @@ function LoginPage() {
           <input
             name="password"
             type="password"
-            className="input2"
+            className="input-password"
             placeholder="*********"
             required
             value={password}
             onChange={handlePasswordChange}
           />
-          <button type="button" className="submitbutton" onClick={handleClick}>
+          <button type="button" className="submit-button" onClick={handleClick}>
             Войти
           </button>
         </form>

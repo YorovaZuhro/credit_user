@@ -2,18 +2,18 @@ import "./WelcomePage.css";
 import bannerurl from "../assets/banner.png";
 import { useNavigate } from "react-router-dom";
 function WelcomePage() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   function handleLoginClick() {
     navigate("/form-filling-page");
   }
   return (
     <div className="container">
-      <div className="container2">
+      <div className="container-text">
         <p className="text">
           Добро пожаловать в сервис "Турбо заем"
         </p>
-        <p className="text1">
+        <p className="welcome-text">
           Вам нужен небольшой заем для покрытия неожиданных расходов или крупная
           сумма для реализации ваших планов,мы готовы помочь. наш процесс
           одобрения займа моментальный, быстрее оставьте заявку и ждите отклика

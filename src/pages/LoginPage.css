@@ -1,5 +1,5 @@
 
-.input1{
+.input-login{
   border: 2px solid #E6E6E6;
   border-radius: 20px;
   padding: 21px;
@@ -11,7 +11,7 @@
   font-weight: bold;
   font-size: 18px;
 }
-.input2{
+.input-password{
   border: 2px solid #E6E6E6;
   border-radius: 20px;
   padding: 21px;
@@ -23,7 +23,7 @@
   font-weight: bold;
   font-size: 18px;
 }
-.submitbutton{
+.submit-button{
   background-color: #5E8AE0;
   margin-left: 4px;
   color: white;

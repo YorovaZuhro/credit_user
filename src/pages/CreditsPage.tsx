@@ -3,9 +3,9 @@ import { CreditData, transaction } from "../types/types";
 import "./CreditsPage.css";
 
 function CreditsPage()
- {const [amount, setamount] = useState<number | undefined>();
+ {const [amount, setAmount] = useState<number | undefined>();
   const [moreInfoOpened, setMoreInfoOpened] = useState(false);
-  const [credits, setcredits] = useState<CreditData[]>([]);
+  const [credits, setCredits] = useState<CreditData[]>([]);
   const [creditId, setCreditId] = useState("");
 
 
@@ -24,7 +24,7 @@ function CreditsPage()
       }
 
       const json = await response.json();
-      setcredits(json.data);
+      setCredits(json.data);
       setCreditId(json.data.id);
       return json.data;
     } catch (error) {
@@ -34,7 +34,7 @@ function CreditsPage()
   }
 
   async function transactionsCredit(
-    id: String,
+    id: string,
     amount: number
   ): Promise<transaction | null> {
     try {
@@ -77,10 +77,10 @@ function CreditsPage()
   };
 
   return (
-    <div className="request-header">
-      <span className="request-span">Мои Кредиты</span>
-      <table className="request-table">
-        <thead className="request-thead">
+    <div className="credit-header">
+      <span className="credit-span">Мои Кредиты</span>
+      <table className="rcredit-table">
+        <thead className="credit-thead">
           <tr>
             <th>Сумма</th>
             <th>Остаток</th>
@@ -114,7 +114,7 @@ function CreditsPage()
               </td>
               <td>
                 <button
-                  className="Button"
+                  className="button"
                   onClick={() => {
                     setCreditId(credit.id);
                     setMoreInfoOpened(true);
@@ -130,31 +130,30 @@ function CreditsPage()
       {moreInfoOpened && (
         <>
           <div
-            className="request-modal-bg"
+            className="credit-modal-bg"
             onClick={() => setMoreInfoOpened(false)}
           ></div>
-          <div className="request-modal">
+          <div className="credit-modal">
             <button
-              className="request-modal-close-button"
+              className="credit-modal-close-button"
               onClick={() => setMoreInfoOpened(false)}
             >
-              ×
             </button>
-            <span className="request-modal-title">Оплата по кредиту</span>
+            <span className="credit-modal-title">Оплата по кредиту</span>
             <div className="block">
-              <div className="request-modal-body">
-                <label className="request-modal-label">
+              <div className="credit-modal-body">
+                <label className="credit-modal-label">
                   Сумма погашения<span style={{ color: "red" }}>*</span>
                 </label>
                <input
-                  className="request-modal-input"
+                  className="credit-modal-input"
                   value={amount}
-                  onChange={(e) => setamount(Number(e.target.value))}
+                  onChange={(e) => setAmount(Number(e.target.value))}
                   placeholder="1200"
                 /> 
               </div>
               <button
-                className="request-modal-button"
+                className="credit-modal-button"
                 onClick={() => {
                   if (amount !== undefined) {
                     transactionsCredit(creditId, amount);
@@ -167,7 +166,7 @@ function CreditsPage()
                 Оплатить
               </button>
               <button
-                className="request-modal-cancel-button"
+                className="credit-modal-cancel-button"
                 onClick={() => setMoreInfoOpened(false)}
               >
                 Отмена

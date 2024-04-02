@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./FormFillingPage.css";
+import Swal from 'sweetalert2';
 
 function FormFillingPage() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ function FormFillingPage() {
     term: '',
   });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: { target: { name: string; value: string; }; }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -19,7 +20,7 @@ function FormFillingPage() {
   };
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const { name, email, amount, currency, term } = formData;
 
     try {
@@ -40,6 +41,7 @@ function FormFillingPage() {
       if (response.ok) {
         const result = await response.json();
         console.log('Success:', result);
+
         setFormData({
           name: '',
           email: '',
@@ -47,11 +49,30 @@ function FormFillingPage() {
           currency: '',
           term: '',
         });
+
+        Swal.fire({
+          title: 'Успех!',
+          text: 'Ваша заявка успешно отправлена',
+          icon: 'success',
+          confirmButtonText: 'Закрыть'
+        });
       } else {
         console.error('Server responded with error:', response.status);
+        Swal.fire({
+          title: 'Ошибка!',
+          text: 'При отправке заявки произошла ошибка',
+          icon: 'error',
+          confirmButtonText: 'Закрыть'
+        });
       }
     } catch (error) {
       console.error('Failed to send form data:', error);
+      Swal.fire({
+        title: 'Ошибка!',
+        text: 'При отправке заявки произошла ошибка',
+        icon: 'error',
+        confirmButtonText: 'Закрыть'
+      });
     }
   };
 
