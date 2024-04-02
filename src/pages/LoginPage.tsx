@@ -32,7 +32,6 @@ function LoginPage() {
         navigate('/credits-page');
       } else {
         console.error("Invalid email or password:", response.status);
-        // Отображение модального окна об ошибке
         Swal.fire({
           icon: 'error',
           title: 'Ошибка аутентификации',
@@ -41,7 +40,6 @@ function LoginPage() {
       }
     } catch (error) {
       console.error("Failed to sign-in:", error);
-      // Отображение модального окна при возникновении исключения во время запроса
       Swal.fire({
         icon: 'error',
         title: 'Ошибка',
