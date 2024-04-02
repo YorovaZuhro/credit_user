@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CreditData, transaction } from "../types/types";
 import "./CreditsPage.css";
-
+ import Swal from 'sweetalert2';
 function CreditsPage()
  {const [amount, setAmount] = useState<number | undefined>();
   const [moreInfoOpened, setMoreInfoOpened] = useState(false);
@@ -33,6 +33,8 @@ function CreditsPage()
     }
   }
 
+ 
+
   async function transactionsCredit(
     id: string,
     amount: number
@@ -49,19 +51,37 @@ function CreditsPage()
           body: JSON.stringify(transactionsBody),
         }
       );
-
+  
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-
+  
       const json = await response.json();
       await fetchCreditRequests();
+  
+    
+      Swal.fire({
+        title: 'Успех!',
+        text: 'Транзакция успешно выполнена',
+        icon: 'success',
+        confirmButtonText: 'ОК'
+      });
+  
       return json.data;
     } catch (error) {
       console.error("Error fetching credit requests:", error);
+      
+      Swal.fire({
+        title: 'Ошибка!',
+        text: 'Произошла ошибка при выполнении транзакции',
+        icon: 'error',
+        confirmButtonText: 'ОК'
+      });
+  
       return null;
     }
   }
+  
 
 
   useEffect(() => {
@@ -92,39 +112,44 @@ function CreditsPage()
           </tr>
         </thead>
         <tbody>
-          {credits.map((credit) => (
-            <tr key={credit.id}>
-              <td>{credit.amount !== null ? credit.amount : "N/A"}</td>
-              <td>
-                {credit.balanceAmount !== null ? credit.balanceAmount : "N/A"}
-              </td>
-              <td>{credit.currency}</td>
-              <td>{formatDate(credit.createdAt)}</td>
-              <td>
-                {typeof credit.term === "number"
-                  ? `${credit.term} мес.`
-                  : "N/A"}
-              </td>{" "}
-              <td>
-                {credit.status === "ACTIVE"
-                  ? "Активный"
-                  : credit.status === "CLOSED"
-                  ? "Погашен"
-                  : "N/A"}
-              </td>
-              <td>
-                <button
-                  className="button"
-                  onClick={() => {
-                    setCreditId(credit.id);
-                    setMoreInfoOpened(true);
-                  }}
-                >
-                  Оплатить
-                </button>
-              </td>
-            </tr>
-          ))}
+        {credits.map((credit) => (
+  <tr key={credit.id}>
+    <td>{credit.amount !== null ? credit.amount : "N/A"}</td>
+    <td>
+      {credit.balanceAmount !== null ? credit.balanceAmount : "N/A"}
+    </td>
+    <td>{credit.currency}</td>
+    <td>{formatDate(credit.createdAt)}</td>
+    <td>
+      {typeof credit.term === "number"
+        ? `${credit.term} мес.`
+        : "N/A"}
+    </td>
+    <td>
+      {credit.status === "ACTIVE"
+        ? "Активный"
+        : credit.status === "CLOSED"
+        ? "Погашен"
+        : "N/A"}
+    </td>
+    <td>
+      {}
+      {credit.status === "ACTIVE" && (
+        <button
+          className="button"
+          onClick={() => {
+            setCreditId(credit.id);
+            setMoreInfoOpened(true);
+          }}
+
+        >
+          Оплатить
+        </button>
+      )}
+    </td>
+  </tr>
+))}
+
         </tbody>
       </table>
       {moreInfoOpened && (
